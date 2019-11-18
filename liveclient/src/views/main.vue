@@ -3,12 +3,31 @@
         <div class="content" :style="bgimg">
             <div class="title">Welcome!</div>
             <div class="search">
-                <el-input placeholder="Tell us where is the destination of your dream vacation..." v-model="destination" clearable >
+                <!-- <el-input placeholder="Tell us where is the destination of your dream vacation..." v-model="destination" clearable >
                 <el-button slot="append" icon="el-icon-search" @click="search"></el-button>
-                </el-input>
+                </el-input> -->
+                <gmap-autocomplete ref="input" placeholder="Tell us where is the destination of your dream vacation..." class="introInput el-input__inner" @place_changed="setPlace">
+                </gmap-autocomplete>
+                <!-- <button @click="search">Add</button> -->
+                <el-button type="primary" icon="el-icon-search" @click="search" style="margin-left:10px;"></el-button>
             </div>
             <div class="map">
-                <img style="height:350px;width:700px;" src="@/assets/map.png" class="image">
+                <!-- <img style="height:350px;width:700px;" src="@/assets/map.png" class="image"> -->
+                <GmapMap
+                  :center="center"
+                  :zoom="7"
+                  map-type-id="terrain"
+                  style="width: 700px; height: 350px"
+                >
+                  <GmapMarker
+                    :key="index"
+                    v-for="(m, index) in markers"
+                    :position="m.position"
+                    :clickable="true"
+                    :draggable="true"
+                    @click="center=m.position"
+                  />
+                </GmapMap>
             </div>
         </div>
         <div class="hotbroadcast">
@@ -82,13 +101,46 @@ export default {
         background: "url(" + require("@/assets/bg.jpg") + ")"
       },
       destination:"",
+      //maps
+      center: {lat: 10.0, lng: 10.0},
+      markers: [{
+                    position: {lat: 11.0, lng: 11.0}
+                }],
+      currentPlace: null
     }
   },
   methods:{
       search(){
-          this.$router.push({name:'search',params:{destination:this.destination}})
+        this.$router.push({name:'search',params:{destination:this.$refs.input.$refs.input.value}})
+      },
+      updateMaker(event){
+        console.log('updateMaker, ', event.latLng.lat());
+        this.markers[0].position = {
+            lat: event.latLng.lat(),
+            lng: event.latLng.lng(),
+        }
+      },
+      setPlace(place) {
+          this.currentPlace = place;
+          const marker = {
+            lat: this.currentPlace.geometry.location.lat(),
+            lng: this.currentPlace.geometry.location.lng()
+          };
+          this.markers=[{ position: marker }];
+          this.center = marker;
+      },
+      geolocate: function() {
+        navigator.geolocation.getCurrentPosition(position => {
+          this.center = {
+            lat: position.coords.latitude,
+            lng: position.coords.longitude
+          };
+        });
       }
-  }
+  },
+  mounted() {
+    this.geolocate();
+  },
 }
 </script>
 <style lang="scss">
