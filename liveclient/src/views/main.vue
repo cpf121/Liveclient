@@ -3,16 +3,11 @@
         <div class="content" :style="bgimg">
             <div class="title">Welcome!</div>
             <div class="search">
-                <!-- <el-input placeholder="Tell us where is the destination of your dream vacation..." v-model="destination" clearable >
-                <el-button slot="append" icon="el-icon-search" @click="search"></el-button>
-                </el-input> -->
                 <gmap-autocomplete ref="input" placeholder="Tell us where is the destination of your dream vacation..." class="introInput el-input__inner" @place_changed="setPlace">
                 </gmap-autocomplete>
-                <!-- <button @click="search">Add</button> -->
                 <el-button type="primary" icon="el-icon-search" @click="search" style="margin-left:10px;"></el-button>
             </div>
             <div class="map">
-                <!-- <img style="height:350px;width:700px;" src="@/assets/map.png" class="image"> -->
                 <GmapMap
                   :center="center"
                   :zoom="7"
