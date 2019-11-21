@@ -1,27 +1,28 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 import main from '../views/main'
-import search from '../views/Search'
-import detail from '../views/detail'
+import viewsign from '../views/shared/Viewsign'
+import guidesign from '../views/shared/Guidesign'
+import childrens from './module'
 
 Vue.use(VueRouter)
 
 const routes = [
   {
     path: '/main',
-    name:'client-search',
-    component: main
+    name:'main',
+    component: main,
+    children:[...childrens]
   },
   {
-    path: '/search',
-    name:'search',
-    component: search,
-    props: true
+    path: '/viewsign',
+    name:'viewsign',
+    component: viewsign
   },
   {
-    path: '/detail',
-    name:'detail',
-    component: detail
+    path: '/guidesign',
+    name:'guidesign',
+    component: guidesign
   }
 ]
 

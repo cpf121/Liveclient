@@ -25,7 +25,24 @@
                 </video>
             </div>
         </div>
-        <div class="right"></div>
+        <div class="right">
+            <div class="r_b_head">
+                <el-button type="danger" style="width:48%">Follow</el-button>
+                <el-button type="danger" style="width:48%">Donate</el-button>
+            </div>
+            <el-divider></el-divider>
+            <div class="chathistory">
+                <span class="user">Tom:</span>good
+                <br>
+                <span class="user">Jerry:</span>very good
+            </div>
+            <div class="r_b_foot">
+                <el-button style="width:100%">Send a message to your guide  <font-awesome-icon :icon="['far', 'smile']"></font-awesome-icon></el-button>
+            </div>
+            <div class="r_b_foot">
+                <el-button style="width:100%">Push to talk privatedly(VIP)</el-button>
+            </div>
+        </div>
     </div>
 </template>
 <script>
@@ -50,6 +67,7 @@ export default {
 .main{
     position: relative;
     margin-left: 100px;
+    margin-top: 10px;
     .left{
         margin-right: 346px;
         .layout-Player-title{
@@ -87,6 +105,22 @@ export default {
         width: 336px;
         border: 1px solid #e5e4e4;
         border-radius: 4px;
+        .r_b_head,.r_b_foot{
+            margin: 8px
+        }
+        .chathistory{
+            position:relative;
+            border-bottom: 1px solid #e5e4e4;
+            left: 0;
+            top: 0;
+            bottom: 90px;
+            height: 300px;
+            padding: 0 0 0 10px ;
+            font-size: 13px;
+            .user{
+                color:blue;
+            }
+        }
     }
 }
 </style>
