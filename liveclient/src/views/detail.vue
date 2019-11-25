@@ -53,11 +53,11 @@ export default {
             avatarurl:require('@/assets/Avatar/avater.jpg'),
             playertitle:"John Simth is talking you on a tour at attraction 1",
             playertype:{
-                type:"网游竞技",
-                subtype:"英雄联盟"
+                type:"Online games",
+                subtype:"League of Legends"
             },
             playerinfo:{
-                name:'一条小团团'
+                name:'John Simth'
             }
         }
     }

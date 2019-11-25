@@ -3,6 +3,7 @@
     <el-header class="header" style="height:50px;z-index:1000">
       <div class="nav">
         <div class="guidecla">
+          <el-avatar class="home" size="medium" icon="el-icon-s-home" @click.native="tohome"></el-avatar>
           <el-button type="text" style="color:white;" @click="beguide">Join as a Guide!</el-button>
         </div>
         <div class="welcomecla"></div>
@@ -36,6 +37,9 @@ export default {
     },
     signup(){
       this.$router.push({name:'viewsign'})
+    },
+    tohome(){
+      this.$router.push({name:'home'})
     }
   }
 }
@@ -62,6 +66,13 @@ body{
         flex-shrink: 1;
         display: flex;
         align-items: center;
+      }
+      .guidecla .home{
+        margin-left:10px;
+        margin-right:4px;
+      }
+      .guidecla .home:hover{
+        cursor:pointer;
       }
       .logincla{
         margin-right: 20px;

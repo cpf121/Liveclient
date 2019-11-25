@@ -5,6 +5,10 @@ import viewsign from '../views/shared/Viewsign'
 import guidesign from '../views/shared/Guidesign'
 import childrens from './module'
 
+const routerPush = VueRouter.prototype.push
+VueRouter.prototype.push = function push(location) {
+  return routerPush.call(this, location).catch(error=> error)
+}
 Vue.use(VueRouter)
 
 const routes = [

@@ -11,57 +11,57 @@
                     <el-card :body-style="{padding:'0px'}" shadow="hover" @click.native="showdetail">
                     <img src="@/assets/hotbroadcast/1.jpg" class="image">
                     <div class="ctitle">
-                        <span>正播CBA-辽宁VS同曦</span>
+                        <span>Broadcasting CBA Liaoning vs Tongxi</span>
                     </div>
                     </el-card>
                 </el-col>
                 <el-col :span="6" class="card_item">
-                    <el-card :body-style="{padding:'0px'}" shadow="hover">
+                    <el-card :body-style="{padding:'0px'}" shadow="hover" @click.native="showdetail">
                     <img src="@/assets/hotbroadcast/2.jpg" class="image">
                     <div class="ctitle">
-                        <span>正播CBA-山东VS天津</span>
+                        <span>Broadcasting CBA Shangdong vs Tianjin</span>
                     </div>
                     </el-card>
                 </el-col>
                 <el-col :span="6" class="card_item">
-                    <el-card :body-style="{padding:'0px'}" shadow="hover">
+                    <el-card :body-style="{padding:'0px'}" shadow="hover" @click.native="showdetail">
                     <img src="@/assets/hotbroadcast/3.jpg" class="image">
                     <div class="ctitle">
-                        <span>最强狂兵🔥爆燃爆热血</span>
+                        <span>The strongest maniac</span>
                     </div>
                     </el-card>
                 </el-col>
                 <el-col :span="6" class="card_item">
-                    <el-card :body-style="{padding:'0px'}" shadow="hover">
+                    <el-card :body-style="{padding:'0px'}" shadow="hover" @click.native="showdetail">
                     <img src="@/assets/hotbroadcast/1.jpg" class="image">
                     <div class="ctitle">
-                        <span>正播CBA-辽宁VS同曦</span>
+                        <span>Broadcasting CBA Liaoning vs Tongxi</span>
                     </div>
                     </el-card>
                 </el-col>
             </el-row>
             <el-row :gutter="7">
                 <el-col :span="6" class="card_item">
-                    <el-card :body-style="{padding:'0px'}" shadow="hover">
+                    <el-card :body-style="{padding:'0px'}" shadow="hover" @click.native="showdetail">
                     <img src="@/assets/hotbroadcast/2.jpg" class="image">
                     <div class="ctitle">
-                        <span>正播CBA-山东VS天津</span>
+                        <span>Broadcasting CBA Shangdong vs Tianjin</span>
                     </div>
                     </el-card>
                 </el-col>
                 <el-col :span="6" class="card_item">
-                    <el-card :body-style="{padding:'0px'}" shadow="hover">
+                    <el-card :body-style="{padding:'0px'}" shadow="hover" @click.native="showdetail">
                     <img src="@/assets/hotbroadcast/3.jpg" class="image">
                     <div class="ctitle">
-                        <span>最强狂兵🔥爆燃爆热血</span>
+                        <span>The strongest maniac</span>
                     </div>
                     </el-card>
                 </el-col>
                 <el-col :span="6" class="card_item">
-                    <el-card :body-style="{padding:'0px'}" shadow="hover">
+                    <el-card :body-style="{padding:'0px'}" shadow="hover" @click.native="showdetail">
                     <img src="@/assets/hotbroadcast/1.jpg" class="image">
                     <div class="ctitle">
-                        <span>正播CBA-辽宁VS同曦</span>
+                        <span>Broadcasting CBA Liaoning vs Tongxi</span>
                     </div>
                     </el-card>
                 </el-col>
@@ -77,34 +77,34 @@
         <div class="recom">
             <el-row :gutter="7">
                 <el-col :span="6" class="card_item">
-                    <el-card :body-style="{padding:'0px'}" shadow="hover">
+                    <el-card :body-style="{padding:'0px'}" shadow="hover" @click.native="showdetail">
                     <img src="@/assets/hotbroadcast/1.jpg" class="image">
                     <div class="ctitle">
-                        <span>正播CBA-辽宁VS同曦</span>
+                        <span>Broadcasting CBA Liaoning vs Tongxi</span>
                     </div>
                     </el-card>
                 </el-col>
                 <el-col :span="6" class="card_item">
-                    <el-card :body-style="{padding:'0px'}" shadow="hover">
+                    <el-card :body-style="{padding:'0px'}" shadow="hover" @click.native="showdetail">
                     <img src="@/assets/hotbroadcast/2.jpg" class="image">
                     <div class="ctitle">
-                        <span>正播CBA-山东VS天津</span>
+                        <span>Broadcasting CBA Shangdong vs Tianjin</span>
                     </div>
                     </el-card>
                 </el-col>
                 <el-col :span="6" class="card_item">
-                    <el-card :body-style="{padding:'0px'}" shadow="hover">
+                    <el-card :body-style="{padding:'0px'}" shadow="hover" @click.native="showdetail">
                     <img src="@/assets/hotbroadcast/3.jpg" class="image">
                     <div class="ctitle">
-                        <span>最强狂兵🔥爆燃爆热血</span>
+                        <span>The strongest maniac</span>
                     </div>
                     </el-card>
                 </el-col>
                 <el-col :span="6" class="card_item">
-                    <el-card :body-style="{padding:'0px'}" shadow="hover">
+                    <el-card :body-style="{padding:'0px'}" shadow="hover" @click.native="showdetail">
                     <img src="@/assets/hotbroadcast/1.jpg" class="image">
                     <div class="ctitle">
-                        <span>正播CBA-辽宁VS同曦</span>
+                        <span>Broadcasting CBA Liaoning vs Tongxi</span>
                     </div>
                     </el-card>
                 </el-col>
